@@ -11,11 +11,23 @@
     justify-content: space-between;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 /* HEADER */
 header {
-    height: 150px;
+    min-height: 70px;
     margin-bottom: 15px;
+    /* display: flex;
+    align-items: center; */
+}
+
+header > div {
+    min-height: 70px;
+    align-items: center;
 }
 
 /* FOOTER */
@@ -25,17 +37,31 @@ footer {
 }
 
 /* --- PARTE CENTRALE --- */
+main, aside {
+    padding: 15px;
+}
+
 /* MAIN */
 main {
     width: calc(67% - 15px);
 }
 
+main article h1,
+main article section {
+    margin-bottom: 15px;
+}
+
 /* ASIDE */
 aside {
     width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
+aside img {
+    width: 100%;
+}
 
 
 
@@ -59,11 +85,71 @@ aside {
 }
 
 .debug main {
-    height: 400px;
+    min-height: 400px;
     background-color: purple;
 }
 
 .debug aside {
     height: 300px;
     background-color: pink;
+}
+
+.debug header .logo {
+    background-color: aqua;
+    height: 50px;
+    width: 100px;
+    border: 1px dashed red;
+}
+
+.debug header nav ul {
+    display: flex;
+}
+
+.debug header nav ul li a {
+    display: inline-block;
+    background-color: lightgreen;
+    height: 50px;
+    width: 40px;
+    border: 1px dashed red;
+}
+
+.debug main article {
+
+}
+
+.debug main article h1 {
+    border: 1px dashed white;
+    background-color: green;
+    min-height: 50px;
+}
+
+.debug main article section {
+    border: 1px dashed white;
+    background-color: lightgray;
+    min-height: 100px;
+}
+
+.debug main article h2,
+.debug main article h3 {
+    border: 1px dashed white;
+    background-color: blue;
+}
+
+.debug main article h2{
+    min-height: 40px;
+}
+
+.debug main article h3{
+    min-height: 30px;
+}
+
+.debug main article p{
+    min-height: 70px;
+    background-color: yellow;
+}
+
+.debug .sponsored-image {
+    height: 200px;
+    width: 150px;
+    background-color: red;
 }
